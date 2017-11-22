@@ -71,8 +71,8 @@
   
     <article id="post-CentOS系统下ss的配置教程" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/11/01/CentOS系统下ss的配置教程/" class="article-date">
-  <time datetime="2017-11-01T07:44:16.000Z" itemprop="datePublished">2017-11-01</time>
+    <a href="/2017/11/22/CentOS系统下ss的配置教程/" class="article-date">
+  <time datetime="2017-11-22T09:32:21.000Z" itemprop="datePublished">2017-11-22</time>
 </a>
     
   </div>
@@ -83,7 +83,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/01/CentOS系统下ss的配置教程/">CentOS系统下的ss配置</a>
+      <a class="article-title" href="/2017/11/22/CentOS系统下ss的配置教程/">CentOS系统下的ss配置</a>
     </h1>
   
 
@@ -117,7 +117,7 @@
 <h4 id="创建一个json文件"><a href="#创建一个json文件" class="headerlink" title="创建一个json文件"></a>创建一个json文件</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">touch /etc/shadowsocks.json</div></pre></td></tr></table></figure>
 <h4 id="编辑json文件"><a href="#编辑json文件" class="headerlink" title="编辑json文件"></a>编辑json文件</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim /etc/shadowsocks.json</div></pre></td></tr></table></figure>
 <p>按 <code>i</code> 进入编辑状态，粘贴这段代码进去</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    &quot;server&quot;: &quot;0.0.0.0&quot;,</div><div class="line">    &quot;port_password&quot;: &#123;</div><div class="line">        &quot;端口1&quot;: &quot;密码1&quot;,</div><div class="line">        &quot;端口2&quot;: &quot;密码2&quot;,</div><div class="line">        &quot;端口3&quot;: &quot;密码3&quot;</div><div class="line">    &#125;,</div><div class="line">    &quot;local_address&quot;: &quot;127.0.0.1&quot;,</div><div class="line">    &quot;local_port&quot;:1080,</div><div class="line">    &quot;timeout&quot;: 300,</div><div class="line">    &quot;method&quot;: &quot;aes-256-cfb”</div><div class="line">&#125;</div><div class="line"></div><div class="line">上边的三个端口代表你创建了三个可以连接到ss 的账户,,如果需要多的就再加上,如果至于要一个,就只保留一个就行了</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    &quot;server&quot;: &quot;0.0.0.0&quot;,</div><div class="line">    &quot;port_password&quot;: &#123;</div><div class="line">        &quot;端口1&quot;: &quot;密码1&quot;,</div><div class="line">        &quot;端口2&quot;: &quot;密码2&quot;,</div><div class="line">        &quot;端口3&quot;: &quot;密码3&quot;</div><div class="line">    &#125;,</div><div class="line">    &quot;local_address&quot;: &quot;127.0.0.1&quot;,</div><div class="line">    &quot;local_port&quot;:1080,</div><div class="line">    &quot;timeout&quot;: 300,</div><div class="line">    &quot;method&quot;: &quot;aes-256-cfb&quot;</div><div class="line">&#125;</div><div class="line"></div><div class="line">上边的三个端口代表你创建了三个可以连接到ss 的账户,,如果需要多的就再加上,如果至于要一个,就只保留一个就行了</div></pre></td></tr></table></figure>
 <hr>
 <h3 id="后台运行shadowsocks服务"><a href="#后台运行shadowsocks服务" class="headerlink" title="后台运行shadowsocks服务"></a>后台运行shadowsocks服务</h3><h4 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssserver -c /etc/shadowsocks.json -d start</div></pre></td></tr></table></figure>
 <p>这一步结束,你就可以去用ss的客户端去测试了,如果没有按照上边步骤一步一步来的话,你现在已经能顺利的打开  Google  了..至于ss客户端配置,下次会讲到</p>
@@ -127,7 +127,7 @@
 <li>简单的自启动设置<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vi /etc/rc.local</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>同样 ,按 i 进入编辑模式 在最后一行添加下面这行命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"> /usr/local/bin/ ssserver -c /etc/shadowsocks.json -d start</div><div class="line"> </div><div class="line">复制之后 按Esc退出编辑模式 然后输入  :wq  回车退出 vim</div></pre></td></tr></table></figure></p>
+<p>同样 ,按 i 进入编辑模式 在最后一行添加下面这行命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"> /usr/local/bin/ssserver –c /etc/shadowsocks.json</div><div class="line"> /usr/local/bin/ ssserver -c /etc/shadowsocks.json -d start</div><div class="line"> </div><div class="line">复制之后 按Esc退出编辑模式 然后输入  :wq  回车退出 vim</div></pre></td></tr></table></figure></p>
 <ul>
 <li>复杂的自启动设置 (这个我本人测试失败用的简单的方法成功)<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vi /etc/init.d/shadowsocks</div></pre></td></tr></table></figure>
 </li>
@@ -140,7 +140,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://github.com/Anthony2225/anthony2225.github.io/2017/11/01/CentOS系统下ss的配置教程/" data-id="cj9gqyii90004xjolbvcs0wkk" class="article-share-link">Share</a>
+      <a data-url="https://github.com/Anthony2225/anthony2225.github.io/2017/11/22/CentOS系统下ss的配置教程/" data-id="cjaaus4lh00005oollmg1q12r" class="article-share-link">Share</a>
       
       
     </footer>
@@ -191,7 +191,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://github.com/Anthony2225/anthony2225.github.io/2017/10/31/Instagram保存图片教程/" data-id="cj9gqyihl0000xjola3oh7h5s" class="article-share-link">Share</a>
+      <a data-url="https://github.com/Anthony2225/anthony2225.github.io/2017/10/31/Instagram保存图片教程/" data-id="cjaaus4ln00025ool5antx7p8" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Instagram-图片-保存/">Instagram  图片 保存</a></li></ul>
@@ -234,7 +234,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://github.com/Anthony2225/anthony2225.github.io/2017/10/31/Xcode9的坑/" data-id="cj9gqyiig0005xjolwl66jasa" class="article-share-link">Share</a>
+      <a data-url="https://github.com/Anthony2225/anthony2225.github.io/2017/10/31/Xcode9的坑/" data-id="cjaaus4lq00035ool6vaj9sqq" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Xcode9-文件报错/">Xcode9 文件报错</a></li></ul>
@@ -290,7 +290,7 @@
       <ul>
         
           <li>
-            <a href="/2017/11/01/CentOS系统下ss的配置教程/">CentOS系统下的ss配置</a>
+            <a href="/2017/11/22/CentOS系统下ss的配置教程/">CentOS系统下的ss配置</a>
           </li>
         
           <li>
