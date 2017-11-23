@@ -5,17 +5,20 @@
   
   <title>CentOS 6 ,  CentOS  7 系统下安装 锐速(为VPN加速) | Anthony</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="第一次玩博客">
+  <meta name="description" content="锐速破解版一键安装   :&amp;gt;锐速serverspeeder是一款TCP网络加速软件，能在Linux系统和Windows系统的服务器中安装，安装后能启到提高网络连接稳定性、带宽利用率、低访问失败率等作用，从而提高服务器网络访问速度。锐速并非实际增大服务器带宽，只是提高网络的稳定性和利用率而已。蜗牛在为服务器安装锐速后，测试服务器全球下载、本地上传下载速度变化不大；但使用超级ping发现，丢包现">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CentOS 6 ,  CentOS  7 系统下安装 锐速(为VPN加速)">
 <meta property="og:url" content="https://github.com/Anthony2225/anthony2225.github.io/2017/11/22/CentOS系统下安装锐速--为VPN加速/index.html">
 <meta property="og:site_name" content="Anthony">
-<meta property="og:description" content="第一次玩博客">
+<meta property="og:description" content="锐速破解版一键安装   :&amp;gt;锐速serverspeeder是一款TCP网络加速软件，能在Linux系统和Windows系统的服务器中安装，安装后能启到提高网络连接稳定性、带宽利用率、低访问失败率等作用，从而提高服务器网络访问速度。锐速并非实际增大服务器带宽，只是提高网络的稳定性和利用率而已。蜗牛在为服务器安装锐速后，测试服务器全球下载、本地上传下载速度变化不大；但使用超级ping发现，丢包现">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-11-22T10:03:14.000Z">
+<meta property="og:image" content="https://github.com/Anthony2225/anthony2225.github.io/2017/11/22/CentOS系统下安装锐速--为VPN加速/images/1511403516366.jpg">
+<meta property="og:image" content="https://github.com/Anthony2225/anthony2225.github.io/2017/11/22/CentOS系统下安装锐速--为VPN加速/images/1511403705983.jpg">
+<meta property="og:updated_time" content="2017-11-23T02:33:23.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CentOS 6 ,  CentOS  7 系统下安装 锐速(为VPN加速)">
-<meta name="twitter:description" content="第一次玩博客">
+<meta name="twitter:description" content="锐速破解版一键安装   :&amp;gt;锐速serverspeeder是一款TCP网络加速软件，能在Linux系统和Windows系统的服务器中安装，安装后能启到提高网络连接稳定性、带宽利用率、低访问失败率等作用，从而提高服务器网络访问速度。锐速并非实际增大服务器带宽，只是提高网络的稳定性和利用率而已。蜗牛在为服务器安装锐速后，测试服务器全球下载、本地上传下载速度变化不大；但使用超级ping发现，丢包现">
+<meta name="twitter:image" content="https://github.com/Anthony2225/anthony2225.github.io/2017/11/22/CentOS系统下安装锐速--为VPN加速/images/1511403516366.jpg">
   
     <link rel="alternate" href="/atom.xml" title="Anthony" type="application/atom+xml">
   
@@ -90,11 +93,40 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h3 id="锐速破解版一键安装"><a href="#锐速破解版一键安装" class="headerlink" title="锐速破解版一键安装"></a>锐速破解版一键安装</h3><p>   :&gt;锐速serverspeeder是一款TCP网络加速软件，能在Linux系统和Windows系统的服务器中安装，安装后能启到提高网络连接稳定性、带宽利用率、低访问失败率等作用，从而提高服务器网络访问速度。锐速并非实际增大服务器带宽，只是提高网络的稳定性和利用率而已。蜗牛在为服务器安装锐速后，测试服务器全球下载、本地上传下载速度变化不大；但使用超级ping发现，丢包现象明显减少。另外一个明显变化就是在同一VPS安装科学上网工具观看YouTube，没安装锐速前观看YouTube 720P视频非常不流畅，经常会出现缓冲现象；而安装锐速后能流畅观看YouTube 720P视频。&lt;:</p>
+<h4 id="目前锐速ServerSpeeder无限带宽破解版支持的内核有："><a href="#目前锐速ServerSpeeder无限带宽破解版支持的内核有：" class="headerlink" title="目前锐速ServerSpeeder无限带宽破解版支持的内核有："></a>目前锐速ServerSpeeder无限带宽破解版支持的内核有：</h4><ul>
+<li>CentOS-6.8：2.6.32-642.el7.x86_64</li>
+<li>CentOS-7.2：3.10.0-327.el7.x86_64</li>
+<li>CentOS：4.4.0-x86_64-linode63</li>
+<li>CentOS：4.4.0-x86_64-linode63</li>
+<li>Debian_8：3.16.0-4-amd64</li>
+</ul>
+<h3 id="安装"><a href="#安装" class="headerlink" title="==安装=="></a>==安装==</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">yum  -y install wget       //安装 wget  如果已经安装就不用了</div><div class="line"></div><div class="line">wget -N --no-check-certificate https://raw.githubusercontent.com/wn789/serverspeeder/master/serverspeeder.sh</div><div class="line"></div><div class="line">   bash serverspeeder.sh</div></pre></td></tr></table></figure>
+<p>安装很简单,显示这个界面就是安装成功<br><img src="./images/1511403516366.jpg" alt="enter description here"></p>
+<p>  但是如果你的内核不在被支持的内核列表,就有可能出现无法安装的问题,如果恰巧你的内核版本有接近可安装内核版本,会提示你选择一个适用的内核,例如这样:<img src="./images/1511403705983.jpg" alt="enter description here"></p>
+<p>  这时你只需要输入标注随便选一个, 并回车就好了,</p>
+<p>  当然还有另一种情况,你的内核版本不支持,而且没有可以凑合用的,这时候,你就要更换你vps的内核了,具体做法如下:<br>  首先用:<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">uname  -r</div></pre></td></tr></table></figure></p>
+<p>  查看你当前的内核版本</p>
+<ul>
+<li>CentOS  6 更换方法<br>然后执行下面命令:<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">rpm -ivh http://xz.wn789.com/CentOSkernel/kernel-firmware-2.6.32-504.3.3.el6.noarch.rpm</div><div class="line"></div><div class="line">rpm -ivh http://xz.wn789.com/CentOSkernel/kernel-2.6.32-504.3.3.el6.x86_64.rpm --force</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>其中的2.6.32-504.3.3.el6  就是你要更换的内核版本,</p>
+<p>执行完上边的命令,输入命令查看内核版本是否更换成功:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rpm -qa | grep kernel</div></pre></td></tr></table></figure></p>
+<p>如果成功,重启vps ,</p>
+<ul>
+<li>CentOS  7  更换方法</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">rpm -ivh http://xz.wn789.com/CentOSkernel/kernel-3.10.0-229.1.2.el7.x86_64.rpm --force</div><div class="line">rpm -qa | grep kernel #查看内核是否安装成功</div></pre></td></tr></table></figure>
+<p>和CentOS 6  一样 如果成功 重启VPS ,,重启命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">reboot</div></pre></td></tr></table></figure></p>
+<p>更换成功内核版本之后,再重复上面👆安装锐速的方法,直到成功.</p>
+<p>最后,说一下锐速serverspeeder的常用命令:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">service serverSpeeder start #启动</div><div class="line">service serverSpeeder stop #停止</div><div class="line">service serverSpeeder reload #重新加载配置</div><div class="line">service serverSpeeder restart #重启</div><div class="line">service serverSpeeder status #状态</div><div class="line">service serverSpeeder stats #统计</div><div class="line">service serverSpeeder renewLic #更新许可文件</div><div class="line">service serverSpeeder update #更新</div><div class="line">chattr -i /serverspeeder/etc/apx* &amp;&amp; /serverspeeder/bin/serverSpeeder.sh uninstall -f #卸载</div></pre></td></tr></table></figure></p>
+<p>至此,CentOS 系统下安装锐速的方法完成了,现在打开 www.youtube.com 去试一下网速吧! enjoy!</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://github.com/Anthony2225/anthony2225.github.io/2017/11/22/CentOS系统下安装锐速--为VPN加速/" data-id="cjaavtgye0002aholy3k45ywe" class="article-share-link">Share</a>
+      <a data-url="https://github.com/Anthony2225/anthony2225.github.io/2017/11/22/CentOS系统下安装锐速--为VPN加速/" data-id="cjabv8lr90001psoltqjsug3j" class="article-share-link">Share</a>
       
       
     </footer>
