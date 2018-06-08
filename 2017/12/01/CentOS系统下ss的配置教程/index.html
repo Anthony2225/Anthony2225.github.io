@@ -8,11 +8,11 @@
   <meta name="description" content="安装ShadowSocks服务端12yum  update # 更新环境 12yum -y install python-setuptools &amp;amp;&amp;amp; easy_install pippip install shadowsocks   这里如果提示 pip 安装失败,,要重装 Python环境   配置安装必须环境3 编译器和相关工具123456#编译器和相关工具：yum group">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CentOS系统下的ss配置">
-<meta property="og:url" content="https://github.com/Anthony2225/anthony2225.github.io/2017/11/22/CentOS系统下ss的配置教程/index.html">
+<meta property="og:url" content="https://github.com/Anthony2225/anthony2225.github.io/2017/12/01/CentOS系统下ss的配置教程/index.html">
 <meta property="og:site_name" content="Anthony">
 <meta property="og:description" content="安装ShadowSocks服务端12yum  update # 更新环境 12yum -y install python-setuptools &amp;amp;&amp;amp; easy_install pippip install shadowsocks   这里如果提示 pip 安装失败,,要重装 Python环境   配置安装必须环境3 编译器和相关工具123456#编译器和相关工具：yum group">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-11-22T09:33:29.000Z">
+<meta property="og:updated_time" content="2017-12-01T02:11:29.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CentOS系统下的ss配置">
 <meta name="twitter:description" content="安装ShadowSocks服务端12yum  update # 更新环境 12yum -y install python-setuptools &amp;amp;&amp;amp; easy_install pippip install shadowsocks   这里如果提示 pip 安装失败,,要重装 Python环境   配置安装必须环境3 编译器和相关工具123456#编译器和相关工具：yum group">
@@ -70,8 +70,8 @@
       <div class="outer">
         <section id="main"><article id="post-CentOS系统下ss的配置教程" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/11/22/CentOS系统下ss的配置教程/" class="article-date">
-  <time datetime="2017-11-22T09:32:21.000Z" itemprop="datePublished">2017-11-22</time>
+    <a href="/2017/12/01/CentOS系统下ss的配置教程/" class="article-date">
+  <time datetime="2017-12-01T02:11:29.000Z" itemprop="datePublished">2017-12-01</time>
 </a>
     
   </div>
@@ -116,7 +116,7 @@
 <h4 id="创建一个json文件"><a href="#创建一个json文件" class="headerlink" title="创建一个json文件"></a>创建一个json文件</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">touch /etc/shadowsocks.json</div></pre></td></tr></table></figure>
 <h4 id="编辑json文件"><a href="#编辑json文件" class="headerlink" title="编辑json文件"></a>编辑json文件</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim /etc/shadowsocks.json</div></pre></td></tr></table></figure>
 <p>按 <code>i</code> 进入编辑状态，粘贴这段代码进去</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    &quot;server&quot;: &quot;0.0.0.0&quot;,</div><div class="line">    &quot;port_password&quot;: &#123;</div><div class="line">        &quot;端口1&quot;: &quot;密码1&quot;,</div><div class="line">        &quot;端口2&quot;: &quot;密码2&quot;,</div><div class="line">        &quot;端口3&quot;: &quot;密码3&quot;</div><div class="line">    &#125;,</div><div class="line">    &quot;local_address&quot;: &quot;127.0.0.1&quot;,</div><div class="line">    &quot;local_port&quot;:1080,</div><div class="line">    &quot;timeout&quot;: 300,</div><div class="line">    &quot;method&quot;: &quot;aes-256-cfb&quot;</div><div class="line">&#125;</div><div class="line"></div><div class="line">上边的三个端口代表你创建了三个可以连接到ss 的账户,,如果需要多的就再加上,如果至于要一个,就只保留一个就行了</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    &quot;server&quot;: &quot;your server address&quot;,</div><div class="line">    &quot;port_password&quot;: &#123;</div><div class="line">        &quot;端口1&quot;: &quot;密码1&quot;,</div><div class="line">        &quot;端口2&quot;: &quot;密码2&quot;,</div><div class="line">        &quot;端口3&quot;: &quot;密码3&quot;</div><div class="line">    &#125;,</div><div class="line">    &quot;local_address&quot;: &quot;127.0.0.1&quot;,</div><div class="line">    &quot;local_port&quot;:1080,</div><div class="line">    &quot;timeout&quot;: 300,</div><div class="line">    &quot;method&quot;: &quot;aes-256-cfb&quot;</div><div class="line">&#125;</div><div class="line"></div><div class="line">上边的三个端口代表你创建了三个可以连接到ss 的账户,,如果需要多的就再加上,如果至于要一个,就只保留一个就行了</div></pre></td></tr></table></figure>
 <hr>
 <h3 id="后台运行shadowsocks服务"><a href="#后台运行shadowsocks服务" class="headerlink" title="后台运行shadowsocks服务"></a>后台运行shadowsocks服务</h3><h4 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssserver -c /etc/shadowsocks.json -d start</div></pre></td></tr></table></figure>
 <p>这一步结束,你就可以去用ss的客户端去测试了,如果没有按照上边步骤一步一步来的话,你现在已经能顺利的打开  Google  了..至于ss客户端配置,下次会讲到</p>
@@ -139,7 +139,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://github.com/Anthony2225/anthony2225.github.io/2017/11/22/CentOS系统下ss的配置教程/" data-id="cjabv8lr40000psolotpl0v3n" class="article-share-link">Share</a>
+      <a data-url="https://github.com/Anthony2225/anthony2225.github.io/2017/12/01/CentOS系统下ss的配置教程/" data-id="cji5tohdt0000urs9kublcvxr" class="article-share-link">Share</a>
       
       
     </footer>
@@ -148,19 +148,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/11/22/CentOS系统下安装锐速--为VPN加速/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/06/08/ceshi/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          CentOS 6 ,  CentOS  7 系统下安装 锐速(为VPN加速)
+          ceshi
         
       </div>
     </a>
   
   
-    <a href="/2017/10/31/Instagram保存图片教程/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/11/22/CentOS系统下安装锐速--为VPN加速/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Instagram 保存图片教程</div>
+      <div class="article-nav-title">CentOS 6 ,  CentOS  7 系统下安装 锐速(为VPN加速)</div>
     </a>
   
 </nav>
@@ -198,7 +198,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">六月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">十二月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a></li></ul>
     </div>
   </div>
 
@@ -211,11 +211,15 @@
       <ul>
         
           <li>
-            <a href="/2017/11/22/CentOS系统下安装锐速--为VPN加速/">CentOS 6 ,  CentOS  7 系统下安装 锐速(为VPN加速)</a>
+            <a href="/2018/06/08/ceshi/">ceshi</a>
           </li>
         
           <li>
-            <a href="/2017/11/22/CentOS系统下ss的配置教程/">CentOS系统下的ss配置</a>
+            <a href="/2017/12/01/CentOS系统下ss的配置教程/">CentOS系统下的ss配置</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/22/CentOS系统下安装锐速--为VPN加速/">CentOS 6 ,  CentOS  7 系统下安装 锐速(为VPN加速)</a>
           </li>
         
           <li>
@@ -238,7 +242,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Anthony<br>
+      &copy; 2018 Anthony<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
